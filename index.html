@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — Baptiste BOIN</title>
+  <meta name="description" content="Portfolio de Baptiste BOIN — Etudiant BTS SIO SLAM. Projets C#, Python, Web et alternance." />
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="script.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  
+  <header class="site">
+    <div class="container topbar">
+      <a class="brand" href="#hero" aria-label="Accueil">
+        <img class="logo" src="photo.jpg" alt="BB">
+        <strong>Baptiste BOIN</strong>
+      </a>
+      <nav class="row" aria-label="Navigation principale">
+        <a href="#about" class="navlink">À propos</a>
+        <a href="#skills" class="navlink">Compétences</a>
+        <a href="#work" class="navlink">Alternance</a>
+        <a href="#projects" class="navlink">Projets</a>
+        <a href="#contact" class="navlink">Contact</a>
+      </nav>
+      <div class="actions">
+        <button class="btn icon-only" id="themeToggle" aria-label="Thème">🌗</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero container">
+      <div class="hero-inner">
+        <div>
+          <h1 class="hero">Bonjour, je suis <span class="accent">Baptiste BOIN</span> — Alternant Développement (BTS SIO)</h1>
+          <p class="muted text-lg">
+            <strong>Portfolio de Compétences — BTS SIO option SLAM (Session 2026)</strong><br><br>
+            Bienvenue sur mon espace dédié à l'épreuve E5. Vous y trouverez une sélection de mes 4 réalisations majeures (en milieu professionnel et en autonomie) validant mes compétences en développement, support et gestion de patrimoine informatique.
+          </p>
+          <div class="badges" aria-label="Mots-clés">
+            <span class="badge">C# .NET</span>
+            <span class="badge">Python</span>
+            <span class="badge">Symfony</span>
+            <span class="badge">SQL Server</span>
+            <span class="badge">Entity Framework</span>
+          </div>
+          <div class="row" style="margin-top:1.5rem">
+            <a class="btn primary" href="#contact">Me contacter</a>
+            <a class="btn" href="cv.pdf" download>Télécharger CV</a>
+          </div>
+        </div>
+        <figure class="portrait">
+          <img class="avatar" src="photo.jpg" alt="Baptiste Boin">
+       </figure>
+      </div>
+    </section> 
+
+    <section id="about">
+      <div class="container grid cols-2">
+        <div>
+          <h2>À propos de moi</h2>
+          <p>Je m'appelle Baptiste BOIN. Actuellement en BTS SIO (option SLAM) et alternant, je conçois des outils logiciels (RPA, Clients lourds, Web) pour optimiser les processus métier en entreprise.</p>
+          <p>En dehors du développement, je suis passionné par les jeux de stratégie, la musique et la culture japonaise.</p>
+        </div>
+        <div class="card">
+          <h3>En bref</h3>
+          <ul>
+            <li><strong>Études</strong> — BTS SIO (En cours), BAC STI2D (Mention Bien)</li>
+            <li><strong>Age</strong> — 19 ans (2006)</li>
+            <li><strong>Passions</strong> — Stratégie, Musique, Japon</li>
+          </ul>
+          <div class="row" style="margin-top:.5rem">
+            <a class="btn" href="https://github.com/bapt-mann" target="_blank">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/baptiste-boin-71506a2a6" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2>Compétences</h2>
+        <div class="grid cols-3">
+          <div class="card">
+            <h3>Langages & Web</h3>
+            <div class="skill-chips">
+              <span class="chip">Python</span>
+              <span class="chip">C# (.NET)</span>
+              <span class="chip">PHP</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">HTML/CSS</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Données & BDD</h3>
+            <div class="skill-chips">
+              <span class="chip">SQL Server</span>
+              <span class="chip">MySQL</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Outils & Frameworks</h3>
+            <div class="skill-chips">
+              <span class="chip">Git</span>
+              <span class="chip">Entity Framework Core</span>
+              <span class="chip">WPF</span>
+              <span class="chip">Symfony</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="container">
+        <h2>Alternance</h2>
+        <article class="card">
+          <div class="row">
+            <div>
+              <h3>Ambroise Bouvier Transports</h3>
+              <div class="muted">Contrat de 2 ans (En cours)</div>
+            </div>
+          </div>
+          <ul style="margin-top:.5rem">
+            <li>Développement d'outils internes et automatisation (Python, C#, WPF).</li>
+            <li>Gestion de bases de données et maintien de l'intégrité (SQL Server).</li>
+            <li>Support utilisateur, déploiement et documentation technique.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2>Réalisations Professionnelles & Personnelles</h2>
+        <p class="muted" style="margin-bottom: 2rem;">Sélection des 4 projets validant les compétences du tableau de synthèse E5.</p>
+        
+        <div class="grid large-grid">
+          
+          <article class="card project" data-file="projects/crm.md">
+            
+            <div class="p-content">
+              <h3>CRM d'Entreprise (WPF / API REST)</h3>
+              <p>Développement de bout en bout d'un logiciel métier. Conception de la BDD (EF Core Code First), création de l'API C#, développement du client lourd WPF et déploiement continu via Velopack et IIS.</p>
+              <div class="tags">
+                <span class="chip">C#</span><span class="chip">WPF</span><span class="chip">API REST</span><span class="chip">EF Core</span><span class="chip">Velopack</span><span class="chip">IIS</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project" data-file="projects/wordpress.md">
+            <div class="p-content">
+              <h3>Site Vitrine de l'Organisation</h3>
+              <p>Développement de la présence en ligne de l'entreprise. Installation et configuration du CMS WordPress, gestion de l'hébergement, optimisation du référencement (SEO) et sécurisation du patrimoine.</p>
+              <div class="tags">
+                <span class="chip">WordPress</span><span class="chip">Web</span><span class="chip">SEO</span><span class="chip">Sécurité</span><span class="chip">Présence en ligne</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project" data-file="projects/node-game.md">
+            <div class="p-content">
+              <h3>Prototype Backend Multijoueur</h3>
+              <p>Projet d'auto-formation (Proof of Concept). Création d'une architecture backend pour un jeu web : gestion de l'authentification sécurisée, conception de la BDD et mise en place d'un système de "rooms" pour les joueurs.</p>
+              <div class="tags">
+                <span class="chip">Node.js</span><span class="chip">TypeScript</span><span class="chip">Base de données</span><span class="chip">Authentification</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project" data-file="projects/simulation.md">
+            <div class="p-content">
+              <h3>Simulation Algorithmique (POO)</h3>
+              <p>Projet d'auto-formation. Modélisation d'un écosystème autonome (Pierre-Feuille-Ciseaux) utilisant la Programmation Orientée Objet (POO) en Python, la génération aléatoire et la gestion des collisions algorithmiques.</p>
+              <div class="tags">
+                <span class="chip">Python</span><span class="chip">POO</span><span class="chip">Algorithmique</span><span class="chip">Logique métier</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="card" style="text-align:center">
+          <h3>Discutons</h3>
+          <p class="muted"><script type="text/javascript">document.write('\u0062\u0061\u0070\u0074\u0069\u0073\u0074\u0065\u002e\u0062\u006f\u0069\u006e\u0030\u0036\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d')</script></p>
+          <div class="row" style="justify-content:center; margin-top:1rem">
+             <a class="btn primary" href="javascript:location='mailto:\u0062\u0061\u0070\u0074\u0069\u0073\u0074\u0065\u002e\u0062\u006f\u0069\u006e\u0030\u0036\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0">Envoyer un mail</a>
+             <a class="btn" href="https://www.linkedin.com/in/baptiste-boin-71506a2a6" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row" style="justify-content:center; gap:1rem">
+        <span>© <span id="year"></span> Baptiste BOIN</span>
+      </div>
+    </div>
+  </footer>
+
+  <div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <div id="modalBody">
+      </div>
+  </div>
+</div>
+</body>
+</html>
