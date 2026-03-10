@@ -1,21 +1,47 @@
-# CRM Contact Manager (Multi-Filiales)
+# CRM Contact Manager - Ambroise Bouvier Transports (ABT)
 
-Solution de gestion centralisée des contacts d'entreprise conçue pour unifier les répertoires de plusieurs filiales et préparer la transition vers la téléphonie IP (VoIP).
+**Contexte :** Pour centraliser et gérer l'annuaire des contacts professionnels des différentes agences de l'entreprise, j'ai conçu et développé de A à Z une solution applicative complète. L'objectif était de remplacer les fichiers éparpillés par un outil unique, sécurisé, et directement relié au système de téléphonie de l'entreprise (3CX).
 
-## Spécifications Techniques
+*[📸 INSÉRER ICI : Une belle capture d'écran de l'interface WPF du CRM (de préférence sur la page de recherche des contacts ou le tableau de bord)]*
 
-### Architecture Client-Serveur (API REST)
-* **Backend C# (ASP.NET Core)** : Développement d'une API REST dédiée servant de passerelle entre la base de données et les clients lourds, garantissant une meilleure sécurité et scalabilité.
-* **Client Lourd WPF** : Interface utilisateur riche développée en C# (WPF), offrant une expérience fluide et réactive pour les gestionnaires de données.
-* **Modélisation de Données** : Conception d'une classe de modèle de base de données (POCO) pour assurer une correspondance parfaite entre les objets métier et le stockage SQL via un ORM.
+## Stack Technique & Architecture
+Ce projet repose sur une **Architecture N-Tier** pour séparer la logique d'affichage, la logique métier et l'accès aux données :
+* **Frontend (Client Lourd) :** C# WPF (Pattern MVVM)
+* **Backend (API) :** ASP.NET Core RESTful
+* **Base de données :** MySQL via Entity Framework Core (Code-First)
+* **Déploiement :** Velopack & Serveur web IIS
 
-### Gestion des Droits & Intégrité
-* **Système RBAC (Role-Based Access Control)** : Implémentation d'une gestion fine des permissions permettant d'attribuer des droits de lecture/écriture spécifiques par utilisateur ou par filiale.
-* **Centralisation de Données** : Fusion des répertoires isolés en une base de données unique pour éliminer les doublons et les silos d'informations entre les différentes entités de l'entreprise.
+---
 
-## Fonctionnalités Clés & Interopérabilité
-* **Compatibilité 3CX** : Préparation des données pour une synchronisation native avec le système de téléphonie IP 3CX, permettant la remontée de fiche lors d'appels entrants.
-* **Transition Téléphonie IP** : Standardisation des formats de numérotation pour assurer la compatibilité future avec les protocoles de téléphonie moderne.
+## Fonctionnalités & Choix Techniques
 
+### 1. Architecture Sécurisée et Habilitations (RBAC)
+L'application intègre un contrôle d'accès poussé basé sur les rôles (Role-Based Access Control). L'API sert de passerelle de sécurité et filtre les droits des utilisateurs selon 4 niveaux :
+* *Lecture Seule* (Consultation).
+* *Créateur* (Gestion de ses propres contacts).
+* *Admin d'Agence* (Gestion à l'échelle d'un site physique).
+* *Super Admin* (Contrôle total via un panneau d'administration dédié).
 
-![alt text](images/image.png)
+*[📸 INSÉRER ICI : Un schéma simple de l'architecture (WPF <-> API <-> BDD) OU une capture d'écran de l'interface d'administration des rôles]*
+
+### 2. Intégration Système (Téléphonie 3CX)
+Pour répondre à un besoin métier fort (gain de temps pour les exploitants), j'ai interconnecté le CRM avec le système téléphonique 3CX de l'entreprise. J'ai configuré l'enregistrement d'un protocole URI système personnalisé (`crm-abt://`) sous Windows, permettant de lancer des appels en un clic directement depuis la fiche d'un contact dans le CRM.
+
+### 3. Mise à disposition et Déploiement Continu (CI/CD)
+Pour faciliter le déploiement sur les nombreux postes de l'entreprise sans intervention manuelle de la DSI :
+* L'API backend est hébergée et sécurisée via le gestionnaire **IIS** de Windows Server.
+* Le client lourd WPF intègre **Velopack**. À chaque lancement, l'application interroge le serveur et télécharge de manière transparente et silencieuse les nouvelles mises à jour ("Over-The-Air").
+
+*[📸 INSÉRER ICI : Une capture de ton terminal montrant la compilation de la release Velopack (vpk pack) OU une capture du dossier sur ton serveur IIS]*
+
+---
+
+## Compétences E5 Validées
+
+* **Gérer le patrimoine informatique :**
+  * *Exploiter des référentiels, normes et standards :* Mise en place d'une architecture N-Tier (API RESTful, Pattern MVVM) et utilisation d'un ORM (Entity Framework).
+  * *Mettre en place et vérifier les niveaux d’habilitation :* Conception du système de rôles (RBAC) pour restreindre l'accès aux données sensibles.
+* **Mettre à disposition des utilisateurs un service informatique :**
+  * *Déployer un service :* Configuration du serveur IIS et automatisation des mises à jour du client via Velopack.
+* **Répondre aux incidents et aux demandes d'assistance :**
+  * *Traiter des demandes concernant les applications :* Développement de la fonctionnalité de clic-to-call (URI 3CX) suite à la demande des utilisateurs finaux.

@@ -34,5 +34,5 @@ Les déplacements des blocs ne sont pas aléatoires mais basés sur des forces v
 
 * **Interactions** : Rouge > Vert > Bleu > Rouge.
 * **Virus (Noir)** : Contamine tout type de bloc par contact ou via une onde de choc.
-* **Limite** : Le nombre de blocs noirs est limité à 20 ; l'ajout d'un nouveau bloc entraîne la retransformation du plus ancien (FIFO).
+* **Limite** : Le nombre de blocs noirs est limité à 20 ; l'ajout d'un nouveau bloc entraîne la destruction de celui-ci.
 
