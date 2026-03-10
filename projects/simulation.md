@@ -1,6 +1,10 @@
 # Simulation d'Agents Autonomes (Pygame)
 
-Ce projet est une simulation technique d'interactions entre entités autonomes utilisant des règles de type "Pierre-Feuille-Ciseaux" et une logique de contamination virale.
+Ce projet est une simulation technique d'interactions entre entités autonomes utilisant des règles de type "Pierre-Feuille-Ciseaux" et une logique de contamination.
+
+![Aperçu de la simulation](images/simulation_1.png)
+
+![Aperçu de la simulation](images/simulation_2.png)
 
 ## Spécifications Techniques
 

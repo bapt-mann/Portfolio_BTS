@@ -10,13 +10,13 @@
   --shadow: 0 10px 30px rgba(0,0,0,.35);
 }
 :root[data-theme="light"] {
-  --bg: #f7f9fc;
-  --bg-soft: #ffffff;
+  --bg: #d1d3d8;
+  --bg-soft: #dadada;
   --text: #0f172a;
   --muted: #445469;
   --brand: #5b4bdf;
   --brand-2: #0e8a8a;
-  --card: #ffffff;
+  --card: #dadada;
   --border: #e6eaf1;
   --shadow: 0 8px 24px rgba(2,6,23,.08);
 }
@@ -39,7 +39,7 @@ header.site {
   background: rgba(18, 22, 35, 0.85);
   border-bottom: 1px solid var(--border);
 }
-:root[data-theme="light"] header.site { background: rgba(255, 255, 255, 0.85); }
+:root[data-theme="light"] header.site { background: rgba(179, 179, 179, 0.85); }
 
 .topbar { display: flex; align-items: center; justify-content: space-between; padding: .75rem 0; flex-wrap: wrap; gap: 1rem; }
 .brand { display: flex; align-items: center; gap: .75rem; text-decoration: none; color: var(--text); font-size: 1.1rem; }
@@ -47,7 +47,7 @@ header.site {
 
 nav.row { display: flex; gap: .5rem; }
 nav a { color: var(--muted); text-decoration: none; padding: .5rem .75rem; border-radius: .6rem; font-weight: 500; font-size: 0.95rem; transition: color .2s, background .2s; }
-nav a:hover, nav a.active { color: var(--text); background: color-mix(in srgb, var(--brand) 15%, transparent); }
+nav a:hover, nav a.active, .btn:hover, .btn:active { color: var(--text); background: color-mix(in srgb, var(--brand) 15%, transparent); }
 
 .actions { display: flex; gap: .5rem; }
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .5rem 1rem; border: 1px solid var(--border); background: var(--card); color: var(--text); border-radius: .6rem; cursor: pointer; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: transform .1s; }
