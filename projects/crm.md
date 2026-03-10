@@ -2,7 +2,7 @@
 
 **Contexte :** Pour centraliser et gérer l'annuaire des contacts professionnels des différentes agences de l'entreprise, j'ai conçu et développé de A à Z une solution applicative complète. L'objectif était de remplacer les fichiers éparpillés par un outil unique, sécurisé, et directement relié au système de téléphonie de l'entreprise (3CX).
 
-*[📸 INSÉRER ICI : Une belle capture d'écran de l'interface WPF du CRM (de préférence sur la page de recherche des contacts ou le tableau de bord)]*
+![Aperçu de l'application](images/crm_1.png)
 
 ## Stack Technique & Architecture
 Ce projet repose sur une **Architecture N-Tier** pour séparer la logique d'affichage, la logique métier et l'accès aux données :
@@ -10,6 +10,10 @@ Ce projet repose sur une **Architecture N-Tier** pour séparer la logique d'affi
 * **Backend (API) :** ASP.NET Core RESTful
 * **Base de données :** MySQL via Entity Framework Core (Code-First)
 * **Déploiement :** Velopack & Serveur web IIS
+
+## Schéma de la BDD :
+
+![Schéma de la BDD](images/crm_mld.png)
 
 ---
 
@@ -22,8 +26,6 @@ L'application intègre un contrôle d'accès poussé basé sur les rôles (Role-
 * *Admin d'Agence* (Gestion à l'échelle d'un site physique).
 * *Super Admin* (Contrôle total via un panneau d'administration dédié).
 
-*[📸 INSÉRER ICI : Un schéma simple de l'architecture (WPF <-> API <-> BDD) OU une capture d'écran de l'interface d'administration des rôles]*
-
 ### 2. Intégration Système (Téléphonie 3CX)
 Pour répondre à un besoin métier fort (gain de temps pour les exploitants), j'ai interconnecté le CRM avec le système téléphonique 3CX de l'entreprise. J'ai configuré l'enregistrement d'un protocole URI système personnalisé (`crm-abt://`) sous Windows, permettant de lancer des appels en un clic directement depuis la fiche d'un contact dans le CRM.
 
@@ -32,7 +34,7 @@ Pour faciliter le déploiement sur les nombreux postes de l'entreprise sans inte
 * L'API backend est hébergée et sécurisée via le gestionnaire **IIS** de Windows Server.
 * Le client lourd WPF intègre **Velopack**. À chaque lancement, l'application interroge le serveur et télécharge de manière transparente et silencieuse les nouvelles mises à jour ("Over-The-Air").
 
-*[📸 INSÉRER ICI : Une capture de ton terminal montrant la compilation de la release Velopack (vpk pack) OU une capture du dossier sur ton serveur IIS]*
+*Capture IIS et Velopack*
 
 ---
 

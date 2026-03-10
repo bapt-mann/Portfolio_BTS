@@ -2,7 +2,7 @@
 
 **Contexte :** Dans le cadre de mon auto-formation sur les architectures web modernes, j'ai voulu expérimenter la communication bidirectionnelle en temps réel, qui diffère totalement des requêtes HTTP classiques. Pour rendre cet apprentissage concret, j'ai développé un "Proof of Concept" (POC) : un moteur de jeu de stratégie au tour par tour (T-RPG) jouable en 1v1 directement dans le navigateur.
 
-*[📸 INSÉRER ICI : Une capture d'écran de la grille de jeu dans le navigateur, ou encore mieux : deux fenêtres de navigateur côte-à-côte montrant la synchronisation instantanée d'un déplacement]*
+*capture du jeu*
 
 ## Stack Technique & Architecture
 * **Backend (Logique & Serveur) :** Node.js

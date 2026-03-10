@@ -4,6 +4,11 @@
 
 *[📸 INSÉRER ICI : Un beau montage photo montrant la page d'accueil de 2 ou 3 sites que tu as réalisés côte à côte, pour montrer l'ampleur du travail]*
 
+![Aperçu des sites WordPress](images/site_web_1.png)
+![Aperçu des sites WordPress](images/site_web_2.png)
+![Aperçu des sites WordPress](images/site_web_3.png)
+
+
 ## Stack Technique & Infrastructure
 * **CMS :** WordPress
 * **Thème graphique :** OnePress (Personnalisation avancée)
@@ -28,11 +33,11 @@ J'ai effectué un travail de fond sur le référencement naturel (SEO) :
 * Amélioration des performances de chargement des pages.
 * Structuration du contenu (balises H1, H2) pour faciliter la lecture par les robots d'indexation (Google).
 
-*[📸 INSÉRER ICI : Une capture d'écran de l'interface OVH montrant tes noms de domaine, OU une capture d'un score SEO (Yoast au vert) / Google Search Console]*
+*capture d'un score SEO*
 
 ---
 
-## ✅ Compétences E5 Validées
+## Compétences E5 Validées
 
 * **Développer la présence en ligne de l'organisation :**
   * *Participer à la valorisation de l’image :* Création des sites vitrines pour les différentes filiales.
