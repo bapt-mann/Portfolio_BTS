@@ -2,8 +2,6 @@
 
 **Contexte :** Afin d'accompagner la croissance du groupe, j'ai été chargé de concevoir et déployer l'identité numérique de plusieurs filiales spécialisées dans le secteur de la logistique. L'objectif était de créer des sites web performants, uniformes visuellement, et optimisés pour attirer de nouveaux clients via les moteurs de recherche.
 
-*[📸 INSÉRER ICI : Un beau montage photo montrant la page d'accueil de 2 ou 3 sites que tu as réalisés côte à côte, pour montrer l'ampleur du travail]*
-
 ![Aperçu des sites WordPress](images/site_web_1.png)
 ![Aperçu des sites WordPress](images/site_web_2.png)
 ![Aperçu des sites WordPress](images/site_web_3.png)
@@ -13,8 +11,6 @@
 * **CMS :** WordPress
 * **Thème graphique :** OnePress (Personnalisation avancée)
 * **Hébergement & DNS :** OVHcloud
-* **Webmarketing :** Extensions SEO (ex: Yoast, RankMath...)
-
 
 
 ---
@@ -22,10 +18,10 @@
 ## Réalisations & Choix Techniques
 
 ### 1. Hébergement et Mise en Production (OVH)
-J'ai pris en charge l'infrastructure web de bout en bout. Cela inclut la réservation des noms de domaine pour chaque filiale, la configuration des zones DNS, et le déploiement des bases de données et fichiers sur les serveurs d'hébergement mutualisé d'OVH. J'ai également mis en place les certificats SSL (HTTPS) pour garantir la sécurité des visiteurs.
+Prise en charge de l'infrastructure web de bout en bout : Réservation des noms de domaine pour chaque filiale, configuration des zones DNS, déploiement des bases de données et fichiers sur les serveurs d'hébergement mutualisé d'OVH. Mise en place des certificats SSL (HTTPS) pour garantir la sécurité des visiteurs.
 
 ### 2. Standardisation Graphique (Thème OnePress)
-Pour garder une cohérence de marque tout en créant des sites distincts, j'ai sélectionné et exploité le thème "OnePress" conformément au site premier site du groupe.
+Pour garder une cohérence de marque tout en créant des sites distincts, j'ai sélectionné et exploité le thème "OnePress" conformément au premier site du groupe.
 
 ### 3. Stratégie de Visibilité (SEO)
 J'ai effectué un travail de fond sur le référencement naturel (SEO) :

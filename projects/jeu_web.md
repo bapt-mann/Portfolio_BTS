@@ -15,12 +15,12 @@
 ## Réalisations & Choix Techniques
 
 ### 1. Communication Temps Réel (WebSockets)
-Contrairement à une application classique où le client doit constamment interroger le serveur (Polling) pour savoir si l'adversaire a joué, j'ai implémenté des **WebSockets** avec `Socket.io`. Cela permet de maintenir une connexion TCP ouverte : dès que le Joueur A déplace son unité, le serveur "pousse" instantanément l'information au Joueur B, garantissant une fluidité parfaite pour du tour par tour.
+Contrairement à une application classique où le client doit constamment interroger le serveur (Polling) pour savoir si l'adversaire a joué, j'ai implémenté des **WebSockets** avec `Socket.io`. Cela permet de maintenir une connexion TCP ouverte : dès que le Joueur A déplace son unité, le serveur "pousse" instantanément l'information au Joueur B, garantissant une fluidité correcte pour du tour par tour.
 
 
 
 ### 2. Sécurité et "Server Authority"
-Dans un jeu multijoueur web, la règle d'or est de ne jamais faire confiance au client (pour éviter la triche). Le frontend ne sert ici qu'à afficher la grille et envoyer des "intentions" de jeu. C'est le serveur **Node.js** qui détient l'état réel de la partie : il valide si un déplacement est possible (portée), calcule les dégâts des attaques, gère les tours, puis renvoie le nouvel état synchronisé aux deux joueurs.
+Dans un jeu multijoueur web, la règle d'or est de ne jamais faire confiance au client (pour éviter la triche). Le frontend ne sert ici qu'à afficher la grille et envoyer des "intentions" de jeu. C'est le serveur **Node.js** qui détient l'état réel de la partie : il valide si un déplacement est possible, calcule les dégâts des attaques, gère les tours, puis renvoie le nouvel état synchronisé aux deux joueurs.
 
 ### 3. Typage Fort et Modélisation (TypeScript)
 Pour gérer la logique complexe d'un RPG (points de vie, statistiques d'attaque, portée sur un quadrillage), j'ai fait le choix d'utiliser **TypeScript**. Le typage strict m'a permis d'éviter de nombreux bugs lors de la manipulation des objets "Unités" et "Joueurs" côté serveur avant la compilation en JavaScript.

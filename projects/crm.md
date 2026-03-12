@@ -34,7 +34,7 @@ Pour faciliter le déploiement sur les nombreux postes de l'entreprise :
 * L'API backend est hébergée et sécurisée via le gestionnaire **IIS** de Windows Server.
 * Le client lourd WPF intègre **Velopack**. À chaque lancement, l'application interroge le serveur et télécharge de manière transparente et silencieuse les nouvelles mises à jour.
 
-*Capture IIS et Velopack*
+![IIS Windows](images/crm_iis.png)
 
 ---
 

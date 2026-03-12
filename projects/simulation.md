@@ -20,7 +20,7 @@ Les déplacements des blocs ne sont pas aléatoires mais basés sur des forces v
 ### Moteur Physique
 
 * **Collisions Élastiques** : Résolution des impacts via vecteurs normaux et conservation de la vélocité.
-* **Stabilisation (Baumgarte)** : Correction de la position par facteur de relaxation (0.4) pour réduire les tremblements lors des empilements.
+* **Stabilisation (Baumgarte)** : Correction de la position par facteur de relaxation (0.4) pour réduire les tremblements lors des empilements (au lieu de corriger une superposition instantanément en forçant les unités à se séparer complètement, on ne corrige qu'un certain pourcentage de la collision pour plus de fluidité).
 * **Sub-stepping** : Exécution de 3 itérations de résolution de collision par cycle d'horloge pour stabiliser les interactions complexes.
 * **Delta Time** : Calcul des mouvements basé sur le temps écoulé pour assurer une vitesse constante quel que soit le framerate.
 
@@ -30,13 +30,12 @@ Les déplacements des blocs ne sont pas aléatoires mais basés sur des forces v
 
 ### Rendu Graphique
 
-* **Rotation** : Orientation des sprites en fonction du vecteur de vélocité.
 * **Motion Trails** : Historique des positions rendu avec un dégradé de transparence et d'épaisseur.
 * **Dégradés** : Fond généré par interpolation bilinéaire via `smoothscale` pour éviter l'effet de banding.
 
 ## Logique de Simulation
 
 * **Interactions** : Rouge > Vert > Bleu > Rouge.
-* **Virus (Noir)** : Contamine tout type de bloc par contact ou via une onde de choc.
+* **Virus (Noir)** : Contamine tout type de bloc par contact
 * **Limite** : Le nombre de blocs noirs est limité à 20 ; l'ajout d'un nouveau bloc entraîne la destruction de celui-ci.
 

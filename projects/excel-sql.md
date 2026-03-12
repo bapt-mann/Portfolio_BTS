@@ -14,7 +14,7 @@
 
 ## Fonctionnalités & Choix Techniques
 
-### 1. Sécurité du Patrimoine (Chiffrement)
+### 1. Sécurité (Chiffrement)
 Afin de ne jamais laisser de mots de passe en clair dans les scripts, j'ai mis en place un système de sécurité strict. Le script `main.py` ne contient aucune information sensible. Il lit les identifiants depuis un fichier `connectionSettings.enc.json` qui est déchiffré à la volée grâce à une clé `secret.key` générée via la librairie `cryptography.fernet`.
 
 ### 2. Flexibilité et Accompagnement Utilisateur
