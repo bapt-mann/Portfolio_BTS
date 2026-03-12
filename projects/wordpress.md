@@ -29,7 +29,7 @@ J'ai effectué un travail de fond sur le référencement naturel (SEO) :
 * Amélioration des performances de chargement des pages.
 * Structuration du contenu (balises H1, H2) pour faciliter la lecture par les robots d'indexation (Google).
 
-*capture d'un score SEO*
+![Aperçu des sites WordPress](images/site_web_SEO.png)
 
 ---
 
