@@ -4,139 +4,236 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Soutenance E5 — Baptiste BOIN</title>
-  
-  <link rel="stylesheet" href="style.css">
-
   <style>
-    /* On bloque le scroll classique de la page entière */
-    html, body { 
-      margin: 0; padding: 0; height: 100%; overflow: hidden; background: var(--bg); 
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --brand: #38bdf8;
+      --brand-2: #818cf8;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --border: #334155;
+      --shadow: 0 10px 25px rgba(0,0,0,0.3);
     }
+    html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; background: var(--bg); font-family: 'Segoe UI', system-ui, sans-serif; color: var(--text); }
+    #slider { height: 100vh; overflow-y: hidden; scroll-snap-type: y mandatory; scroll-behavior: smooth; }
+    .slide { height: 100vh; width: 100%; scroll-snap-align: start; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0; position: relative; }
     
-    /* Le conteneur du diaporama avec l'effet "aimant" (scroll-snap) */
-    #slider { 
-      height: 100vh; 
-      overflow-y: hidden; /* Modification : on laisse le scroll vertical mais on masque le horizontal */
-      overflow-x: hidden; /* Ajout : On coupe la barre horizontale ici */
-      scroll-snap-type: y mandatory; 
-      scroll-behavior: smooth; 
-    }
-    
-    /* Le design d'une slide individuelle */
-    .slide { 
-      height: 100vh; 
-      width: 100%; /* Modification : on met 100% au lieu de 100vw */
-      scroll-snap-align: start; 
-      display: flex; 
-      flex-direction: column; 
-      justify-content: center; 
-      align-items: center; 
-      text-align: center; 
-      padding: 2rem;
-      position: relative;
-    }
-
+    /* Conteneur agrandi */
     .slide-content {
       background: var(--card);
-      padding: 3rem;
-      border-radius: 12px;
+      padding: 4rem;
+      border-radius: 16px;
       box-shadow: var(--shadow);
       border: 1px solid var(--border);
-      max-width: 900px;
+      max-width: 1200px; /* Plus large */
+      width: 90%;
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1 { font-size: 4.5rem; color: var(--brand); margin: 0; }
+    h2 { font-size: 3rem; color: var(--brand-2); margin-bottom: 2rem; }
+    p { font-size: 1.6rem; color: var(--muted); line-height: 1.6; }
+    
+    /* Logos et Visuels */
+    .app-showcase { display: flex; gap: 2rem; justify-content: center; margin-top: 2rem; }
+    .logo-placeholder {
+      width: 120px; height: 120px;
+      border: 2px dashed var(--brand);
+      border-radius: 20px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem; color: var(--brand); text-transform: uppercase;
+    }
+
+    /* Tableau de synthèse simulé */
+    .synthesis-table {
+      width: 100%; border-collapse: collapse; margin-top: 1rem; background: var(--bg); border-radius: 8px; overflow: hidden;
+    }
+    .synthesis-table th, .synthesis-table td {
+      border: 1px solid var(--border); padding: 15px; text-align: center; font-size: 1.1rem;
+    }
+    .synthesis-table th { background: var(--brand); color: var(--bg); }
+    .check { color: #4ade80; font-weight: bold; font-size: 1.5rem; }
+
+    .page-number { position: absolute; bottom: 30px; right: 40px; color: var(--muted); font-family: monospace; font-size: 1.5rem; }
+
+    /* Design des cartes pour les projets (Slide 4) */
+    .cards-container {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
       width: 100%;
     }
 
-    /* Typographie adaptée pour grand écran */
-    .slide h1 { font-size: 3.5rem; color: var(--brand); margin-bottom: 0.5rem; margin-top: 0; }
-    .slide h2 { font-size: 2.2rem; color: var(--brand-2); margin-top: 0; margin-bottom: 1.5rem; }
-    .slide p { font-size: 1.3rem; color: var(--muted); line-height: 1.6; }
-    
-    /* Grille pour les compétences ou technos */
-    .flex-chips { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
-    .big-chip { background: var(--bg-soft); border: 1px solid var(--border); color: var(--text); padding: 12px 24px; border-radius: 8px; font-size: 1.2rem; font-weight: 600;}
-    
-    /* Indicateur de page en bas à droite */
-    .page-number { position: absolute; bottom: 20px; right: 30px; color: var(--muted); font-family: monospace; font-size: 1.2rem; }
+    /* Design des cartes pour les projets (Slide 4 et 3) */
+    .cards-container {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+      width: 100%;
+    }
+
+    /* Ajoute ceci pour la grille à 3 colonnes de la slide entreprise */
+    .cards-3-cols {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .project-card {
+      background: rgba(0, 0, 0, 0.2); /* Un fond légèrement plus sombre pour détacher la carte */
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      flex: 1; /* Les deux cartes prennent exactement la même largeur */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      color: var(--brand-2);
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Le secret pour des images parfaites et non déformées */
+    .project-card img {
+      width: 100%;
+      height: 300px; /* On fixe une hauteur max... */
+      object-fit: contain; /* ...et on dit à l'image de ne jamais se déformer ! */
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .project-card p {
+      font-size: 1.1rem;
+      margin: 0;
+      line-height: 1.5;
+      color: var(--text);
+    }
   </style>
 </head>
 <body>
 
   <div id="slider">
 
-    <section class="slide" id="slide-1">
+    <section class="slide">
       <div class="slide-content">
         <h1>Baptiste BOIN</h1>
-        <h2>Soutenance E5 - Session 2026</h2>
-        <p>Support et mise à disposition de services informatiques<br><strong>BTS SIO Option SLAM</strong></p>
+        <h2 style="color: var(--text);">Présentation Épreuve E5 BTS SIO SLAM</h2>
+        <p>Alternant Développeur chez <strong>Ambroise Bouvier Transports</strong></p>
       </div>
-      <div class="page-number">1 / 7</div>
+      <div class="page-number">1 / 6</div>
     </section>
 
-    <section class="slide" id="slide-2">
+    <section class="slide">
       <div class="slide-content">
-        <h2 style="color: var(--brand);">Mon Profil & Contexte</h2>
-        <p><strong>Alternant Développeur</strong> chez Ambroise Bouvier Transports (ABT).</p>
-        <p>Mission : Modernisation des outils internes et gestion du patrimoine numérique dans un environnement multi-agences.</p>
+        <h2>Tableau de Synthèse</h2>
+        <table class="synthesis-table">
+          <thead>
+            <tr>
+              <th>Réalisations</th>
+              <th>Patrimoine</th>
+              <th>Incidents</th>
+              <th>Présence Web</th>
+              <th>Projet</th>
+              <th>Déploiement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>CRM Contact Manager</td><td class="check">✔</td><td class="check">✔</td><td></td><td></td><td class="check">✔</td></tr>
+            <tr><td>Réseau Sites WordPress</td><td class="check">✔</td><td></td><td class="check">✔</td><td></td><td class="check">✔</td></tr>
+            <tr><td>Générateur SQL/Excel</td><td></td><td class="check">✔</td><td></td><td></td><td></td></tr>
+            <tr><td>POC Backend Node.js</td><td class="check">✔</td><td></td><td></td><td class="check">✔</td><td></td></tr>
+            <tr><td>Simulation Pygame</td><td></td><td></td><td></td><td class="check">✔</td><td></td></tr>
+          </tbody>
+        </table>
       </div>
-      <div class="page-number">2 / 7</div>
+      <div class="page-number">2 / 6</div>
     </section>
 
-    <section class="slide" id="slide-3">
-      <div class="slide-content">
-        <h2>Couverture des Compétences</h2>
-        <p>Mon parcours m'a permis de valider la grille E5 à travers <strong>5 projets stratégiques</strong> :</p>
-        <div class="flex-chips">
-          <div class="big-chip">Gestion du Patrimoine</div>
-          <div class="big-chip">Incidents & Assistance</div>
-          <div class="big-chip">Présence en Ligne</div>
-          <div class="big-chip">Mode Projet</div>
-          <div class="big-chip">Déploiement de Services</div>
-          <div class="big-chip">Auto-formation (Veille)</div>
+<section class="slide">
+      <div class="slide-content" style="max-width: 1400px;"> <h2>Expérience en Entreprise (ABT)</h2>
+        
+        <div class="cards-3-cols">
+          
+          <div class="project-card">
+            <h3>CRM Contact Manager</h3>
+            <img src="images/crm_1.png" alt="Capture d'écran CRM">
+            <p>Architecture N-Tier, C# WPF, API REST & MySQL. Intégration téléphonie 3CX.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--brand);">Déploiement : IIS & Velopack</p>
+          </div>
+
+          <div class="project-card">
+            <h3>Utilitaire RPA (SQL/Excel)</h3>
+            <p>Script Python d'automatisation. Exécution de requêtes SQL et export sécurisé vers Excel.</p>
+          </div>
+
+          <div class="project-card">
+            <h3>Réseau Sites WordPress</h3>
+            <img src="images/site_web_1.png" alt="Capture d'écran WordPress">
+            <p>Déploiement de plusieurs sites vitrines pour les agences. Gestion de l'hébergement et du SEO.</p>
+          </div>
+
         </div>
       </div>
-      <div class="page-number">3 / 7</div>
+      <div class="page-number">3 / 6</div>
     </section>
 
     <section class="slide" id="slide-4">
       <div class="slide-content">
-        <h2>Réalisations Professionnelles</h2>
-        <p><strong>CRM Contact Manager :</strong> Logiciel C# WPF & API REST (Déploiement Velopack & IIS).</p>
-        <p><strong>Réseau Web :</strong> Déploiement de sites vitrines WordPress (OVH, SEO).</p>
-        <p><strong>Automatisation :</strong> Script Python d'extraction SQL vers Excel (Sécurisé).</p>
-      </div>
-      <div class="page-number">4 / 7</div>
-    </section>
-
-    <section class="slide" id="slide-5">
-      <div class="slide-content">
-        <h2>Auto-Formation & Expérimentation</h2>
-        <p>Exploration d'architectures modernes en dehors du cursus classique.</p>
-        <div class="flex-chips">
-          <div class="big-chip">Moteur Jeu Multijoueur (Node.js / WebSockets)</div>
-          <div class="big-chip">Simulation Algo POO (Python)</div>
+        <h2>Projets Personnels</h2>
+        <div class="cards-container">
+            <div class="project-card">
+              <h3>POC Backend Multijoueur</h3>
+              <img src="images/jeu_web.png" alt="Jeu Websocket">
+              <p>Jeu au tour par tour (Node.js/WebSockets). Communication temps réel et concept de "Server Authority".</p>
+            </div>
+            
+            <div class="project-card">
+              <h3>Simulation Algo POO</h3>
+              <img src="images/simulation_1.png" alt="Simulation Python">
+              <p>Simulation Pierre-Feuille-Ciseaux (Python). Approfondissement de la POO, gestion des collisions et de comportements.</p>
+            </div>
         </div>
       </div>
-      <div class="page-number">5 / 7</div>
+      <div class="page-number">4 / 6</div>
     </section>
 
-    <section class="slide" id="slide-6">
+    <section class="slide">
       <div class="slide-content">
         <h2>Veille Technologique</h2>
-        <p>Sources principales : GitHub Trending, X (Tech), Flux RSS (Feedly).</p>
-        <p><strong>Sujet suivi cette année :</strong> L'évolution du C# / .NET et les enjeux de cybersécurité sur les API REST.</p>
+        <div style="text-align: left;">
+            <p><strong>Actualité & Vulgarisation :</strong></p>
+            <p style="font-size: 1.2rem; margin-left: 2rem;">V2F, MiCode, Leo TechMaker (Cybersécurité et Hardware)</p>
+            <p><strong>Simulations et IA :</strong></p>
+            <p style="font-size: 1.2rem; margin-left: 2rem;">Code BH :</p>
+            <p style="font-size: 1.2rem; margin-left: 2rem;">Suivi des simulations de développement d'IA : apprentissage par renforcement, évolution de populations d'agents avec règles de progression génétique et optimisation de comportements complexes.</p>
+            <br><p style="font-size: 1.2rem; margin-left: 2rem;">Usage quotidien des LLM pour l'apprentissage de nouveaux frameworks.</p>
+          </div>
       </div>
-      <div class="page-number">6 / 7</div>
+      <div class="page-number">5 / 6</div>
     </section>
 
-    <section class="slide" id="slide-7">
-      <div class="slide-content" style="border-color: var(--brand);">
-        <h1>Merci de votre attention.</h1>
-        <p>Retrouvez les fiches détaillées, architectures et preuves de ces réalisations sur :</p>
-        <h2 style="margin-top: 1rem;">bts.baptiste-boin.fr</h2>
+    <section class="slide">
+      <div class="slide-content">
+        <h1>Merci pour votre attention</h1>
+        <div style="margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+            <p>Portfolio complet & Documentation :</p>
+            <h2 style="color: var(--brand);">bts.baptiste-boin.fr</h2>
+        </div>
       </div>
-      <div class="page-number">7 / 7</div>
+      <div class="page-number">6 / 6</div>
     </section>
-
   </div>
 
   <script>
