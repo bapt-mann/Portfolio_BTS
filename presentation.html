@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Soutenance E5 — Baptiste BOIN</title>
+  
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* On bloque le scroll classique de la page entière */
+    html, body { 
+      margin: 0; padding: 0; height: 100%; overflow: hidden; background: var(--bg); 
+    }
+    
+    /* Le conteneur du diaporama avec l'effet "aimant" (scroll-snap) */
+    #slider { 
+      height: 100vh; 
+      overflow-y: hidden; /* Modification : on laisse le scroll vertical mais on masque le horizontal */
+      overflow-x: hidden; /* Ajout : On coupe la barre horizontale ici */
+      scroll-snap-type: y mandatory; 
+      scroll-behavior: smooth; 
+    }
+    
+    /* Le design d'une slide individuelle */
+    .slide { 
+      height: 100vh; 
+      width: 100%; /* Modification : on met 100% au lieu de 100vw */
+      scroll-snap-align: start; 
+      display: flex; 
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+      text-align: center; 
+      padding: 2rem;
+      position: relative;
+    }
+
+    .slide-content {
+      background: var(--card);
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      max-width: 900px;
+      width: 100%;
+    }
+
+    /* Typographie adaptée pour grand écran */
+    .slide h1 { font-size: 3.5rem; color: var(--brand); margin-bottom: 0.5rem; margin-top: 0; }
+    .slide h2 { font-size: 2.2rem; color: var(--brand-2); margin-top: 0; margin-bottom: 1.5rem; }
+    .slide p { font-size: 1.3rem; color: var(--muted); line-height: 1.6; }
+    
+    /* Grille pour les compétences ou technos */
+    .flex-chips { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+    .big-chip { background: var(--bg-soft); border: 1px solid var(--border); color: var(--text); padding: 12px 24px; border-radius: 8px; font-size: 1.2rem; font-weight: 600;}
+    
+    /* Indicateur de page en bas à droite */
+    .page-number { position: absolute; bottom: 20px; right: 30px; color: var(--muted); font-family: monospace; font-size: 1.2rem; }
+  </style>
+</head>
+<body>
+
+  <div id="slider">
+
+    <section class="slide" id="slide-1">
+      <div class="slide-content">
+        <h1>Baptiste BOIN</h1>
+        <h2>Soutenance E5 - Session 2026</h2>
+        <p>Support et mise à disposition de services informatiques<br><strong>BTS SIO Option SLAM</strong></p>
+      </div>
+      <div class="page-number">1 / 7</div>
+    </section>
+
+    <section class="slide" id="slide-2">
+      <div class="slide-content">
+        <h2 style="color: var(--brand);">Mon Profil & Contexte</h2>
+        <p><strong>Alternant Développeur</strong> chez Ambroise Bouvier Transports (ABT).</p>
+        <p>Mission : Modernisation des outils internes et gestion du patrimoine numérique dans un environnement multi-agences.</p>
+      </div>
+      <div class="page-number">2 / 7</div>
+    </section>
+
+    <section class="slide" id="slide-3">
+      <div class="slide-content">
+        <h2>Couverture des Compétences</h2>
+        <p>Mon parcours m'a permis de valider la grille E5 à travers <strong>5 projets stratégiques</strong> :</p>
+        <div class="flex-chips">
+          <div class="big-chip">Gestion du Patrimoine</div>
+          <div class="big-chip">Incidents & Assistance</div>
+          <div class="big-chip">Présence en Ligne</div>
+          <div class="big-chip">Mode Projet</div>
+          <div class="big-chip">Déploiement de Services</div>
+          <div class="big-chip">Auto-formation (Veille)</div>
+        </div>
+      </div>
+      <div class="page-number">3 / 7</div>
+    </section>
+
+    <section class="slide" id="slide-4">
+      <div class="slide-content">
+        <h2>Réalisations Professionnelles</h2>
+        <p><strong>CRM Contact Manager :</strong> Logiciel C# WPF & API REST (Déploiement Velopack & IIS).</p>
+        <p><strong>Réseau Web :</strong> Déploiement de sites vitrines WordPress (OVH, SEO).</p>
+        <p><strong>Automatisation :</strong> Script Python d'extraction SQL vers Excel (Sécurisé).</p>
+      </div>
+      <div class="page-number">4 / 7</div>
+    </section>
+
+    <section class="slide" id="slide-5">
+      <div class="slide-content">
+        <h2>Auto-Formation & Expérimentation</h2>
+        <p>Exploration d'architectures modernes en dehors du cursus classique.</p>
+        <div class="flex-chips">
+          <div class="big-chip">Moteur Jeu Multijoueur (Node.js / WebSockets)</div>
+          <div class="big-chip">Simulation Algo POO (Python)</div>
+        </div>
+      </div>
+      <div class="page-number">5 / 7</div>
+    </section>
+
+    <section class="slide" id="slide-6">
+      <div class="slide-content">
+        <h2>Veille Technologique</h2>
+        <p>Sources principales : GitHub Trending, X (Tech), Flux RSS (Feedly).</p>
+        <p><strong>Sujet suivi cette année :</strong> L'évolution du C# / .NET et les enjeux de cybersécurité sur les API REST.</p>
+      </div>
+      <div class="page-number">6 / 7</div>
+    </section>
+
+    <section class="slide" id="slide-7">
+      <div class="slide-content" style="border-color: var(--brand);">
+        <h1>Merci de votre attention.</h1>
+        <p>Retrouvez les fiches détaillées, architectures et preuves de ces réalisations sur :</p>
+        <h2 style="margin-top: 1rem;">bts.baptiste-boin.fr</h2>
+      </div>
+      <div class="page-number">7 / 7</div>
+    </section>
+
+  </div>
+
+  <script>
+    const slider = document.getElementById('slider');
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === ' ') {
+        e.preventDefault();
+        if (currentSlide < slides.length - 1) {
+          currentSlide++;
+          slides[currentSlide].scrollIntoView({ behavior: 'smooth' });
+        }
+      } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+        e.preventDefault();
+        if (currentSlide > 0) {
+          currentSlide--;
+          slides[currentSlide].scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  </script>
+</body>
+</html>
