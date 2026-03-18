@@ -14,8 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 </head>
-<body>
-  
+<body> 
   <header class="site">
     <div class="container topbar">
       <a class="brand" href="#hero" aria-label="Accueil">
@@ -27,7 +26,7 @@
         <a href="#skills" class="navlink">Compétences</a>
         <a href="#work" class="navlink">Alternance</a>
         <a href="#projects" class="navlink">Projets</a>
-        <a href="#contact" class="navlink">Contact</a>
+        <a href="#veille" class="navlink">Veille</a> <a href="#contact" class="navlink">Contact</a>
       </nav>
       <div class="actions">
         <button class="btn icon-only" id="themeToggle" aria-label="Thème">🌗</button>
@@ -192,6 +191,29 @@
         </div>
       </div>
     </section>
+    <section id="veille">
+      <div class="container">
+        <h2>Veille Technologique</h2>
+        <p class="muted" style="margin-bottom: 2rem;">Suivi continu des évolutions logicielles, des architectures réseau et de l'intelligence artificielle.</p>
+        
+        <div class="grid cols-3">
+          
+          <article class="card article-card">
+            <img src="images/veille_neat.webp" alt="Algorithme NEAT">
+            <h3>Comprendre l'algorithme NEAT en Python</h3>
+            <p class="muted">NeuroEvolution of Augmenting Topologies. 
+            Étude de l'évolution génétique permettant de faire évoluer non seulement les poids, 
+            mais l'architecture même des réseaux de neurones.</p>
+            <a href="https://towardsdatascience.com/from-genes-to-neural-networks-understanding-and-building-neat-neuro-evolution-of-augmenting-topologies-from-scratch/" target="_blank" class="btn primary">Lire l'article</a>
+         </article>
+
+          <article class="card article-card">
+            <img src="images/ue5_logo.webp" alt="Unreal Engine 5 PCG">
+            <h3>UE5 : Le framework PCG (Génération Procédurale)</h3>
+            <p class="muted">Étude du nouveau système Procedural Content Generation d'Unreal Engine 5. Comprendre comment l'utilisation de graphes nodaux et d'algorithmes permet d'automatiser la création d'environnements massifs tout en optimisant les performances en temps réel.</p>
+            <a href="https://dev.epicgames.com/documentation/fr-fr/unreal-engine/procedural-content-generation-overview" target="_blank" class="btn primary">Lire la documentation</a>
+          </article>
+        </div>
       </div>
     </section>
 

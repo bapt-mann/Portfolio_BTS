@@ -270,6 +270,38 @@ footer { padding: 40px 0; text-align: center; color: var(--muted); border-top: 1
     padding: 6px 14px;
 }
 
+/* ================= VEILLE TECHNOLOGIQUE ================= */
+.article-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.article-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Recadre l'image proprement sans la déformer */
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+    border: 1px solid var(--border);
+}
+
+.article-card h3 {
+    color: var(--brand);
+    font-size: 1.2rem;
+}
+
+.article-card p.muted {
+    flex-grow: 1; /* Pousse le bouton vers le bas pour que toutes les cartes soient alignées */
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.article-card .btn {
+    text-align: center;
+    width: 100%; /* Le bouton prend toute la largeur de la carte */
+}
+
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
