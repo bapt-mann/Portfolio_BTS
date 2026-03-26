@@ -136,6 +136,22 @@
     </section>
 
     <section class="slide">
+      <div class="slide-content" style="text-align: left; max-width: 1000px;">
+        <h2>Mon Parcours</h2>
+        <div style="display: flex; gap: 3rem; align-items: center; margin-top: 2rem;">
+          <div style="flex: 1; border-left: 4px solid var(--brand); padding-left: 2rem;">
+            <h3 style="color: var(--brand); margin-bottom: 0.5rem;">2024 - Baccalauréat STI2D</h3>
+            <p style="margin-top: 0; color: var(--muted);">Découverte de la logique système et première approche de l'algorithmique.</p>
+            
+            <h3 style="color: var(--brand); margin-bottom: 0.5rem; margin-top: 2rem;">2024/2026 - BTS SIO Option SLAM</h3>
+            <p style="margin-top: 0; color: var(--muted);">Choix orienté par une forte appétence pour la conception logicielle, la création d'outils métiers et l'automatisation de tâches.</p>
+          </div>
+        </div>
+      </div>
+      <div class="page-number">2 / 9</div>
+    </section>
+
+    <section class="slide">
       <div class="slide-content">
         <h2>Tableau de Synthèse</h2>
         <table class="synthesis-table">
@@ -161,16 +177,18 @@
       <div class="page-number">2 / 6</div>
     </section>
 
-<section class="slide">
+    <section class="slide">
       <div class="slide-content" style="max-width: 1400px;"> <h2>Expérience en Entreprise (ABT)</h2>
         
         <div class="cards-3-cols">
-          
           <div class="project-card">
             <h3>CRM Contact Manager</h3>
             <img src="images/crm_1.png" alt="Capture d'écran CRM">
-            <p>Architecture N-Tier, C# WPF, API REST & MySQL. Intégration téléphonie 3CX.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--brand);">Déploiement : IIS & Velopack</p>
+            <p>Architecture N-Tier, C# WPF, API REST & MySQL.</p>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem;">
+                <span style="background: var(--brand); color: #000; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Patrimoine (Git/SQL)</span>
+                <span style="background: var(--brand-2); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Déploiement (Velopack)</span>
+            </div>
           </div>
 
           <div class="project-card">
@@ -190,6 +208,38 @@
       <div class="page-number">3 / 6</div>
     </section>
 
+    <section class="slide">
+      <div class="slide-content" style="max-width: 1200px;">
+        <h2>Projets de Formation</h2>
+        <p style="margin-top: 0; margin-bottom: 2rem; color: var(--muted);">Mise en pratique de la gestion de projet Agile et du développement collaboratif.</p>
+        
+        <div class="cards-container">
+            <div class="project-card">
+              <h3 style="color: var(--brand);">WorkTogether (Data Center)</h3>
+              <img src="images/worktogether.png" alt="WorkTogether" style="width: 100%; height: 200px; object-fit: contain; border-radius: 8px; margin-bottom: 1rem;">
+              <p><strong>Architecture Duale :</strong> Client web (Symfony) pour la location d'emplacements en baie, et Client lourd pour l'administration.</p>
+              
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem;">
+                  <span style="background: var(--brand); color: #000; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Mode Projet (Kanban/Issues)</span>
+                  <span style="background: var(--brand-2); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Symfony / Client Lourd</span>
+              </div>
+            </div>
+            
+            <div class="project-card">
+              <h3 style="color: var(--brand);">Space Hub</h3>
+              <img src="images/spacehub.png" alt="Space Hub" style="width: 100%; height: 200px; object-fit: contain; border-radius: 8px; margin-bottom: 1rem;">
+              <p><strong>Plateforme Web :</strong> Application Symfony de location d'espaces événementiels avec gestion des dates, de l'authentification et création de lieux.</p>
+              
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem;">
+                  <span style="background: var(--brand); color: #000; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Travail en Groupe</span>
+                  <span style="background: var(--brand-2); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Git Collaboratif</span>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="page-number">4 / 9</div> 
+    </section>
+
     <section class="slide" id="slide-4">
       <div class="slide-content">
         <h2>Projets Personnels</h2>
@@ -202,7 +252,7 @@
             
             <div class="project-card">
               <h3>Simulation Algo POO</h3>
-              <img src="images/simulation_1.png" alt="Simulation Python">
+              <video src="videos/simulation.mp4" autoplay loop muted style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;"></video>
               <p>Simulation Pierre-Feuille-Ciseaux (Python). Approfondissement de la POO, gestion des collisions et de comportements.</p>
             </div>
         </div>
@@ -218,8 +268,7 @@
             <p style="font-size: 1.2rem; margin-left: 2rem;">V2F, Overflow, MiCode, Underscore (Cybersécurité et Hardware)</p>
             <p><strong>IA :</strong></p>
             <p style="font-size: 1.2rem; margin-left: 2rem;">Usage quotidien des LLM pour l'apprentissage de nouveaux frameworks.</p>
-            <p><strong>Sujets spécifiques :</strong></p>
-            <p style="font-size: 1.2rem; margin-left: 2rem;">Génération procédurale, Algorithme NEAT (Neural Evolution of Augmenting Topologies)</p>
+            <p><strong>Agrégateur de flux RSS</strong></p>
           </div>
       </div>
       <div class="page-number">5 / 6</div>

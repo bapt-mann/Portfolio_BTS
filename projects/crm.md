@@ -1,49 +1,15 @@
 # CRM Contact Manager - Ambroise Bouvier Transports (ABT)
 
-**Contexte :** Pour centraliser et gérer l'annuaire des contacts professionnels des différentes agences de l'entreprise, j'ai conçu et développé de A à Z une solution applicative complète. L'objectif était de remplacer les fichiers éparpillés par un outil unique, sécurisé, et directement relié au système de téléphonie de l'entreprise (3CX).
-
 ![Aperçu de l'application](images/crm_1.png)
 
-## Stack Technique & Architecture
-Ce projet repose sur une **Architecture N-Tier** pour séparer la logique d'affichage, la logique métier et l'accès aux données :
-* **Frontend (Client Lourd) :** C# WPF (Pattern MVVM)
-* **Backend (API) :** ASP.NET Core RESTful
-* **Base de données :** MySQL via Entity Framework Core (Code-First)
-* **Déploiement :** Velopack & Serveur web IIS
+## Présentation du projet
+Pour centraliser l'annuaire des contacts professionnels de l'entreprise, j'ai développé une solution applicative complète (CRM). L'objectif était de remplacer les fichiers Excel éparpillés par un outil unique et hautement sécurisé. Ce projet repose sur une architecture N-Tier : un client lourd C# WPF pour l'interface, une API backend ASP.NET Core RESTful pour la logique, et une base de données MySQL gérée via Entity Framework Core. 
 
-## Schéma de la BDD :
+## Gérer le patrimoine informatique  
+J'ai conçu l'application en respectant les standards d'architecture (Pattern MVVM, N-Tier) pour faciliter sa maintenabilité. J'ai surtout mis en place un contrôle d'accès strict basé sur les rôles (RBAC). L'API filtre les droits des utilisateurs selon quatre niveaux d'habilitation (de la Lecture Seule au Super Administrateur), garantissant que chaque collaborateur n'a accès qu'aux données de son agence, protégeant ainsi les informations sensibles de l'entreprise.
 
-![Schéma de la BDD](images/crm_mld.png)
+## Mettre à disposition et déployer un service  
+Pour faciliter le déploiement sur la centaine de postes de l'entreprise, j'ai configuré le serveur web IIS (Windows Server) pour héberger l'API. Côté utilisateur, j'ai automatisé les mises à jour en intégrant la solution Velopack au client lourd WPF. À chaque lancement, l'application interroge le serveur IIS et télécharge silencieusement les nouvelles versions, garantissant que tous les collaborateurs disposent d'un outil à jour sans intervention manuelle.
 
----
-
-## Fonctionnalités & Choix Techniques
-
-### 1. Architecture Sécurisée et Habilitations (RBAC)
-L'application intègre un contrôle d'accès poussé basé sur les rôles (Role-Based Access Control). L'API sert de passerelle de sécurité et filtre les droits des utilisateurs selon 4 niveaux :
-* *Lecture Seule* (Consultation).
-* *Créateur* (Gestion de ses propres contacts).
-* *Admin d'Agence* (Gestion à l'échelle d'un site physique).
-* *Super Admin* (Contrôle total via un panneau d'administration dédié).
-
-### 2. Intégration Système (Téléphonie 3CX)
-Pour répondre à un besoin métier fort (gain de temps pour les exploitants), j'ai interconnecté le CRM avec le système téléphonique 3CX de l'entreprise, en configurant l'enregistrement d'un protocole URI système personnalisé (`crm-abt://`) sous Windows, permettant de lancer des appels en un clic directement depuis la fiche d'un contact dans le CRM.
-
-### 3. Mise à disposition et Déploiement Continu (CI/CD)
-Pour faciliter le déploiement sur les nombreux postes de l'entreprise :
-* L'API backend est hébergée et sécurisée via le gestionnaire **IIS** de Windows Server.
-* Le client lourd WPF intègre **Velopack**. À chaque lancement, l'application interroge le serveur et télécharge de manière transparente et silencieuse les nouvelles mises à jour.
-
-![IIS Windows](images/crm_iis.png)
-
----
-
-## Compétences E5 Validées
-
-* **Gérer le patrimoine informatique :**
-  * *Exploiter des référentiels, normes et standards :* Mise en place d'une architecture N-Tier (API REST, Pattern MVVM) et utilisation d'un ORM (Entity Framework).
-  * *Mettre en place et vérifier les niveaux d’habilitation :* Conception du système de rôles (RBAC) pour restreindre l'accès aux données sensibles.
-* **Mettre à disposition des utilisateurs un service informatique :**
-  * *Déployer un service :* Configuration du serveur IIS et automatisation des mises à jour du client via Velopack.
-* **Répondre aux incidents et aux demandes d'assistance :**
-  * *Traiter des demandes concernant les applications :* Développement de la fonctionnalité de clic-to-call (URI 3CX) suite à la demande des utilisateurs finaux.
+## Répondre aux demandes d'évolution  
+Suite à une demande des utilisateurs, j'ai fait évoluer l'application pour l'interconnecter avec le système téléphonique 3CX. J'ai développé une fonctionnalité "Click-to-Call" via un protocole URI système personnalisé (`crm-abt://`), permettant aux exploitants de lancer des appels en un clic depuis le CRM.

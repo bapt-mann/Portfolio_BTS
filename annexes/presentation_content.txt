@@ -13,3 +13,39 @@ Faire le tour des projets dans le Tableau, présentation rapide
 5. Veille Technologique
 Yt : V2F, MiCode, Leo Tech Maker, Code BH pour des projets de dev gaming 
 IA pour des renseignements de Technologies pour mes projets
+
+
+il faudrait ajouter le projet WorkTogether et le projet Space Hub dans une catégorie Projet réalisé en cours de formations 
+
+
+
+work together :
+
+client léger : site web symfony pour les clients de Worktogether permet d'acheter des emplacements dans des baies d'un data center  
+
+gérer une page d'accueil, une authentification, un espace client les données des emplacements et les interventions des techniciens sur les unités stockés
+
+
+
+client lourd : gestion des utilisateurs par un administrateur, fonctionnalités pour des techniciens et des comptables, système de connexion avec gestion de role
+
+
+
+gestion de projet :
+
+Kanban GitHub ajout de fonctionnalité avec issues dans le Kanban 
+
+
+
+SpaceHub :
+
+site web symfony permet de se connecter, louer un llieu sur une certaine date créer des lieus 
+
+
+
+gestion de projet :
+
+en groupe Kanban github :
+
+chacun a ajouté des fonctionnalités sur le projet 
+

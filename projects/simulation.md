@@ -1,41 +1,12 @@
-# Simulation d'Agents Autonomes (Pygame)
-
-Ce projet est une simulation technique d'interactions entre entités autonomes utilisant des règles de type "Pierre-Feuille-Ciseaux" et une logique de contamination.
+# Simulation Algorithmique et Physique (Python)
 
 ![Aperçu de la simulation](images/simulation_1.png)
 
-![Aperçu de la simulation](images/simulation_2.png)
+## Présentation du projet
+Ce projet est une simulation technique d'interactions entre des entités autonomes développée en Python (Pygame). L'objectif était de concevoir un écosystème fermé régi par des règles de type "Pierre-Feuille-Ciseaux" (Rouge > Vert > Bleu), auquel s'ajoute une mécanique de contamination par un virus. La simulation intègre un moteur physique gérant des forces vectorielles et la résolution des collisions.
 
-## Spécifications Techniques
+## Organiser son développement professionnel 
+Pour modéliser des comportements physiques réalistes, j'ai dû mettre en œuvre des stratégies de veille très spécifiques. Je me suis documenté sur la méthode de Baumgarte (stabilisation des collisions) et le calcul du *Delta Time* (indépendance du mouvement par rapport au framerate). N'ayant pas un niveau mathématique avancé, j'ai activement utilisé des IA (LLMs) comme assistants de recherche pour comprendre et transposer ces concepts théoriques en classes orientées objet (POO) dans mon code Python.
 
-### Système de Mouvement (Steering Behaviors)
-
-Les déplacements des blocs ne sont pas aléatoires mais basés sur des forces vectorielles :
-
-* **Seek & Flee** : Calcul de forces pour rejoindre ou fuir une cible selon le type d'élément.
-* **Arrive** : Ralentissement progressif à l'approche d'une zone cible pour éviter les oscillations.
-* **Wander** : Force de déplacement erratique appliquée en l'absence de cible.
-* **Meute (Zone)** : Les blocs secondaires suivent un leader tout en maintenant une distance de séparation pour former un groupe circulaire.
-
-### Moteur Physique
-
-* **Collisions Élastiques** : Résolution des impacts via vecteurs normaux et conservation de la vélocité.
-* **Stabilisation (Baumgarte)** : Correction de la position par facteur de relaxation (0.4) pour réduire les tremblements lors des empilements (au lieu de corriger une superposition instantanément en forçant les unités à se séparer complètement, on ne corrige qu'un certain pourcentage de la collision pour plus de fluidité).
-* **Sub-stepping** : Exécution de 3 itérations de résolution de collision par cycle d'horloge pour stabiliser les interactions complexes.
-* **Delta Time** : Calcul des mouvements basé sur le temps écoulé pour assurer une vitesse constante quel que soit le framerate.
-
-### Optimisation
-
-* **Spatial Partitioning** : Utilisation d'une grille spatiale (chunks de 80px) pour limiter les calculs de collision aux blocs adjacents.
-
-### Rendu Graphique
-
-* **Motion Trails** : Historique des positions rendu avec un dégradé de transparence et d'épaisseur.
-* **Dégradés** : Fond généré par interpolation bilinéaire via `smoothscale` pour éviter l'effet de banding.
-
-## Logique de Simulation
-
-* **Interactions** : Rouge > Vert > Bleu > Rouge.
-* **Virus (Noir)** : Contamine tout type de bloc par contact
-* **Limite** : Le nombre de blocs noirs est limité à 20 ; l'ajout d'un nouveau bloc entraîne la destruction de celui-ci.
-
+## Travailler en mode projet 
+La complexité algorithmique du projet (calcul de collisions croisées entre des centaines d'entités) a provoqué d'importantes chutes de performances. Pour résoudre ce problème, j'ai dû analyser mon code et planifier une phase d'optimisation majeure : j'ai implémenté le concept de *Spatial Partitioning* (découpage de la carte en sous-zones ou *chunks* de 80px), divisant drastiquement le nombre de calculs par cycle d'horloge et sauvant la fluidité de la simulation.
