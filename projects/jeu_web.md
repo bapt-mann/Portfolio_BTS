@@ -10,3 +10,4 @@ Ce projet est le fruit de la mise en place d'un environnement d'apprentissage pe
 
 ## Gérer le patrimoine informatique 
 Dans une architecture multijoueur web, le client (navigateur) est par définition vulnérable. Pour exploiter les standards de sécurité de cette industrie, j'ai mis en œuvre le concept de "Server Authority". Le backend Node.js détient l'état réel de la partie : il vérifie la validité des déplacements et calcule les dégâts avant de renvoyer l'état synchronisé aux deux joueurs, protégeant ainsi l'intégrité de la partie contre la triche.
+

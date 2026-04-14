@@ -1,0 +1,321 @@
+:root {
+  --bg: #0b0d12;
+  --bg-soft: #121623;
+  --text: #e7ecf3;
+  --muted: #9ba7b4;
+  --brand: #7c5cff;
+  --brand-2: #18b3b3;
+  --card: #121826;
+  --border: #263143;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+:root[data-theme="light"] {
+  --bg: #d1d3d8;
+  --bg-soft: #dadada;
+  --text: #0f172a;
+  --muted: #445469;
+  --brand: #5b4bdf;
+  --brand-2: #0e8a8a;
+  --card: #dadada;
+  --border: #e6eaf1;
+  --shadow: 0 8px 24px rgba(2,6,23,.08);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg) 50%, var(--bg-soft) 100%);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Layout */
+.container { width: min(1100px, 92vw); margin: 0 auto; }
+header.site {
+  position: sticky; top: 0; z-index: 100;
+  backdrop-filter: blur(12px);
+  background: rgba(18, 22, 35, 0.85);
+  border-bottom: 1px solid var(--border);
+}
+:root[data-theme="light"] header.site { background: rgba(179, 179, 179, 0.85); }
+
+.topbar { display: flex; align-items: center; justify-content: space-between; padding: .75rem 0; flex-wrap: wrap; gap: 1rem; }
+.brand { display: flex; align-items: center; gap: .75rem; text-decoration: none; color: var(--text); font-size: 1.1rem; }
+.logo { width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); display: grid; place-items: center; font-weight: 800; color: #fff; }
+
+nav.row { display: flex; gap: .5rem; }
+nav a { color: var(--muted); text-decoration: none; padding: .5rem .75rem; border-radius: .6rem; font-weight: 500; font-size: 0.95rem; transition: color .2s, background .2s; }
+nav a:hover, nav a.active, .btn:hover, .btn:active { color: var(--text); background: color-mix(in srgb, var(--brand) 15%, transparent); }
+
+.actions { display: flex; gap: .5rem; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .5rem 1rem; border: 1px solid var(--border); background: var(--card); color: var(--text); border-radius: .6rem; cursor: pointer; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: transform .1s; }
+.btn:active { transform: scale(0.97); }
+.btn.primary { background: linear-gradient(135deg, var(--brand), var(--brand-2)); border: none; color: #fff; }
+.btn.icon-only { padding: .5rem; width: 36px; }
+
+/* Hero */
+#hero { padding: 80px 0 40px; }
+.hero-inner { display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; gap: 3rem; }
+.hero h1 { font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.1; margin: 0 0 1rem; letter-spacing: -0.02em; }
+.hero h1 .accent { background: linear-gradient(90deg, var(--brand), var(--brand-2)); -webkit-background-clip: text; color: transparent; }
+.subtitle { color: var(--muted); font-size: 1.1rem; margin-bottom: 1.5rem; }
+
+.badges { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 2rem; }
+.badge { font-size: .85rem; padding: .3rem .7rem; border: 1px solid var(--border); border-radius: 2rem; color: var(--muted); background: var(--bg-soft); }
+
+.portrait {
+  position: relative; display: flex; justify-content: center;
+}
+.avatar {
+  width: 180px; height: 180px; border-radius: 40px; 
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  display: grid; place-items: center; font-size: 3rem; font-weight: 800; color: #fff;
+  box-shadow: 0 20px 40px -10px var(--brand);
+  transform: rotate(-3deg);
+}
+
+/* Sections */
+section { padding: 60px 0; border-top: 1px solid var(--border); }
+section h2 { font-size: 2rem; margin: 0 0 2rem; letter-spacing: -0.01em; }
+
+.grid { display: grid; gap: 1.5rem; }
+.grid.cols-2 { grid-template-columns: 1fr 1fr; }
+.grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; transition: transform .2s, border-color .2s; }
+.card:hover { border-color: var(--brand); transform: translateY(-2px); }
+.card h3 { margin: 0 0 .5rem; font-size: 1.1rem; }
+.muted { color: var(--muted); font-size: 0.95rem; }
+
+/* Skills Chips */
+.skill-chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
+.chip { padding: .3rem .6rem; background: var(--bg); border: 1px solid var(--border); border-radius: .4rem; font-size: .85rem; font-family: monospace; }
+
+/* Project Stack */
+.stack { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: .4rem; }
+.stack .chip { font-size: .75rem; border-color: transparent; background: color-mix(in srgb, var(--brand) 10%, var(--card)); color: var(--brand); }
+
+/* Styles de la Modale */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.8); /* Un peu plus sombre pour focus */
+  backdrop-filter: blur(5px);
+  align-items: center; 
+  justify-content: center;
+  padding: 20px; /* Espace pour ne pas coller aux bords sur mobile */
+}
+
+.modal-content {
+  background: var(--card);
+  color: var(--text);
+  /* On garde le padding global pour l'esthétique */
+  padding: 0; 
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  width: min(800px, 100%);
+  max-height: 90vh;
+  position: relative;
+  box-shadow: var(--shadow);
+  
+  /* IMPORTANT : On empêche le contenu de déborder des arrondis */
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column;
+}
+
+/* On crée une zone de défilement interne dédiée au corps du texte */
+#modalBody {
+  padding: 2.5rem; /* Le padding est déplacé ici */
+  overflow-y: auto; /* Le scroll se fait ici maintenant */
+  flex: 1;
+}
+
+/* On empêche le scroll du body quand la modale est ouverte */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Optionnel : Style de la scrollbar pour qu'elle soit plus discrète */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#modalBody img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem; right: 1.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.close-modal:hover { color: var(--brand); }
+
+/* Style du contenu Markdown dans la modale */
+#modalBody h1, #modalBody h2, #modalBody h3 {
+    color: var(--brand);
+    margin-top: 1.5rem;
+}
+
+#modalBody ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#modalBody code {
+    background: var(--bg);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+#modalBody p {
+    margin-bottom: 1rem;
+}
+
+#modalBody::-webkit-scrollbar {
+  width: 12px; /* Un peu plus large pour laisser respirer */
+}
+
+#modalBody::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
+  /* On crée un effet de marge autour du curseur de scroll */
+  border: 3px solid var(--card); 
+}
+
+/* Curseur sur les projets pour indiquer l'interaction */
+.project { cursor: pointer; }
+
+/* Footer */
+footer { padding: 40px 0; text-align: center; color: var(--muted); border-top: 1px solid var(--border); font-size: 0.9rem; }
+
+/* ================= AFFICHAGE IMPACTANT DES PROJETS BTS ================= */
+.large-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.large-grid .card {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.large-grid .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.large-grid .project img {
+    height: 280px; /* On agrandit la hauteur de l'image (au lieu des 180px par défaut) */
+    width: 100%;
+    object-fit: cover;
+    border-bottom: 2px solid var(--border); /* Petite séparation propre */
+}
+
+.large-grid .p-content {
+    padding: 1.75rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.large-grid h3 {
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: .75rem;
+    color: var(--brand);
+}
+
+.large-grid p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 2rem; /* Pousse les tags vers le bas */
+    flex-grow: 1;
+}
+
+.large-grid .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.large-grid .tags .chip {
+    font-size: 0.9rem; /* Des tags un peu plus lisibles */
+    padding: 6px 14px;
+}
+
+/* ================= VEILLE TECHNOLOGIQUE ================= */
+.article-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.article-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Recadre l'image proprement sans la déformer */
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+    border: 1px solid var(--border);
+}
+
+.article-card h3 {
+    color: var(--brand);
+    font-size: 1.2rem;
+}
+
+.article-card p.muted {
+    flex-grow: 1; /* Pousse le bouton vers le bas pour que toutes les cartes soient alignées */
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.article-card .btn {
+    text-align: center;
+    width: 100%; /* Le bouton prend toute la largeur de la carte */
+}
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
+  .hero-inner > div { order: 2; }
+  .portrait { order: 1; margin-bottom: 1rem; }
+  .badges, .row { justify-content: center; }
+  .grid.cols-2, .grid.cols-3 { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .topbar { flex-direction: column; gap: 1rem; }
+  nav.row { flex-wrap: wrap; justify-content: center; gap: 0.25rem; }
+  nav a { font-size: 0.9rem; padding: 0.4rem 0.6rem; }
+  .hero h1 { font-size: 2rem; }
+  .container { width: 90vw; }
+  .large-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+}
