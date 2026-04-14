@@ -48,16 +48,20 @@
               <th>Patrimoine</th>
               <th>Incidents</th>
               <th>Présence Web</th>
-              <th>Projet</th>
+              <th>Mode Projet</th>
               <th>Déploiement</th>
+              <th>Org. Pro</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>CRM Contact Manager</td><td class="check">✔</td><td class="check">✔</td><td></td><td></td><td class="check">✔</td></tr>
-            <tr><td>Réseau Sites WordPress</td><td class="check">✔</td><td></td><td class="check">✔</td><td></td><td class="check">✔</td></tr>
-            <tr><td>Générateur SQL/Excel</td><td></td><td class="check">✔</td><td></td><td></td><td></td></tr>
-            <tr><td>POC Backend Node.js</td><td class="check">✔</td><td></td><td></td><td class="check">✔</td><td></td></tr>
-            <tr><td>Simulation Pygame</td><td></td><td></td><td></td><td class="check">✔</td><td></td></tr>
+            <tr style="opacity:.6;font-size:.95rem;"><td colspan="7" style="text-align:left;padding:8px 15px;background:rgba(255,255,255,.03);font-style:italic;">— Réalisations en cours de formation —</td></tr>
+            <tr><td>Simulation Algorithmique Python</td><td></td><td></td><td></td><td class="check">✔</td><td></td><td class="check">✔</td></tr>
+            <tr><td>POF Backend d'un jeu web</td><td class="check">✔</td><td></td><td></td><td></td><td></td><td class="check">✔</td></tr>
+            <tr><td>WorkTogether (Data Center)</td><td class="check">✔</td><td></td><td class="check">✔</td><td class="check">✔</td><td class="check">✔</td><td></td></tr>
+            <tr style="opacity:.6;font-size:.95rem;"><td colspan="7" style="text-align:left;padding:8px 15px;background:rgba(255,255,255,.03);font-style:italic;">— Réalisations en milieu professionnel —</td></tr>
+            <tr><td>Site web WordPress</td><td></td><td></td><td class="check">✔</td><td></td><td></td><td></td></tr>
+            <tr><td>Générateur SQL vers Excel</td><td class="check">✔</td><td class="check">✔</td><td></td><td></td><td class="check">✔</td><td></td></tr>
+            <tr><td>CRM Contact Manager</td><td class="check">✔</td><td class="check">✔</td><td></td><td></td><td class="check">✔</td><td></td></tr>
           </tbody>
         </table>
       </div>
@@ -71,23 +75,32 @@
           <div class="project-card">
             <h3>CRM Contact Manager</h3>
             <img src="images/crm_1.png" alt="Capture d'écran CRM">
-            <p>Architecture N-Tier, C# WPF, API REST & MySQL.</p>
+            <p>Architecture N-Tier (C# WPF + API REST + MySQL). RBAC 4 niveaux, déploiement automatisé via Velopack + IIS, intégration Click-to-Call avec le système 3CX.</p>
             <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem;">
-                <span style="background: var(--brand); color: #000; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Patrimoine (Git/SQL)</span>
-                <span style="background: var(--brand-2); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Déploiement (Velopack)</span>
+              <span style="background: var(--brand); color: #000; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Patrimoine</span>
+              <span style="background: var(--brand-2); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Incidents</span>
+              <span style="background: var(--brand); color: #000; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Déploiement</span>
             </div>
           </div>
 
           <div class="project-card">
-            <h3>Utilitaire RPA (SQL/Excel)</h3>
+            <h3>Générateur SQL vers Excel</h3>
             <img src="images/python_logo.webp" alt="Logo Python">
-            <p>Script Python d'automatisation. Exécution de requêtes SQL et export vers Excel.</p>
+            <p>Outil RPA Python : requêtes SQL configurées via <code>commande.cfg</code>, identifiants chiffrés (Fernet), export formaté à la charte graphique via <code>modele.cfg</code>.</p>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem;">
+              <span style="background: var(--brand); color: #000; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Patrimoine</span>
+              <span style="background: var(--brand-2); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Incidents</span>
+              <span style="background: var(--brand); color: #000; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Déploiement</span>
+            </div>
           </div>
 
           <div class="project-card">
             <h3>Réseau Sites WordPress</h3>
             <img src="images/site_web_1.png" alt="Capture d'écran WordPress">
-            <p>Déploiement de plusieurs sites vitrines pour les agences. Gestion de l'hébergement et du SEO.</p>
+            <p>Déploiement de l'identité numérique de plusieurs filiales ABT. Optimisation SEO (Title, Meta Description, H1/H2) pour indexation Google dans le secteur logistique.</p>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem;">
+              <span style="background: var(--brand-2); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Présence Web</span>
+            </div>
           </div>
 
         </div>
@@ -100,26 +113,16 @@
         <h2>Projets de Formation</h2>
         <p style="margin-top: 0; margin-bottom: 2rem; color: var(--muted);">Mise en pratique de la gestion de projet Agile et du développement collaboratif.</p>
         
-        <div class="cards-container">
-            <div class="project-card">
-              <h3 style="color: var(--brand);">WorkTogether (Data Center)</h3>
-              <img src="images/worktogether.png" alt="WorkTogether" style="width: 100%; height: 200px; object-fit: contain; border-radius: 8px; margin-bottom: 1rem;">
-              <p><strong>Architecture Duale :</strong> Client web (Symfony) pour la location d'emplacements en baie, et Client lourd pour l'administration.</p>
-              
+        <div style="display: flex; justify-content: center;">
+            <div class="project-card" style="max-width: 600px;">
+              <h3 style="color: var(--brand);">WorkTogether — SI Data Center</h3>
+              <img src="images/worktogether.png" alt="WorkTogether" style="width: 100%; height: 220px; object-fit: contain; border-radius: 8px; margin-bottom: 1rem;">
+              <p>Architecture duale : portail web Symfony (espace client, auth email, suivi baies) + client lourd (admin RBAC). Déploiement stack LEMP sur Debian. Pilotage via Kanban GitHub.</p>
               <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem;">
-                  <span style="background: var(--brand); color: #000; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Mode Projet (Kanban/Issues)</span>
-                  <span style="background: var(--brand-2); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Symfony / Client Lourd</span>
-              </div>
-            </div>
-            
-            <div class="project-card">
-              <h3 style="color: var(--brand);">Space Hub</h3>
-              <img src="images/spacehub.png" alt="Space Hub" style="width: 100%; height: 200px; object-fit: contain; border-radius: 8px; margin-bottom: 1rem;">
-              <p><strong>Plateforme Web :</strong> Application Symfony de location d'espaces événementiels avec gestion des dates, de l'authentification et création de lieux.</p>
-              
-              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem;">
-                  <span style="background: var(--brand); color: #000; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Travail en Groupe</span>
-                  <span style="background: var(--brand-2); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Git Collaboratif</span>
+                <span style="background: var(--brand); color: #000; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Patrimoine</span>
+                <span style="background: var(--brand-2); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Présence Web</span>
+                <span style="background: var(--brand); color: #000; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Mode Projet</span>
+                <span style="background: var(--brand-2); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Déploiement</span>
               </div>
             </div>
         </div>
@@ -132,15 +135,23 @@
         <h2>Projets Personnels</h2>
         <div class="cards-container">
             <div class="project-card">
-              <h3>POC Backend Multijoueur</h3>
+              <h3>POF Backend Multijoueur (Node.js)</h3>
               <img src="images/jeu_web.png" alt="Jeu Websocket">
-              <p>Jeu au tour par tour (Node.js/WebSockets). Communication temps réel et concept de "Server Authority".</p>
+              <p>POC T-RPG 1v1 navigateur. Backend Node.js/TypeScript + WebSockets. Concept <em>Server Authority</em> pour sécuriser l'état de la partie. Auto-formation TypeScript en dehors du cursus.</p>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem;">
+                <span style="background: var(--brand); color: #000; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Patrimoine</span>
+                <span style="background: var(--brand-2); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Org. Professionnelle</span>
+              </div>
             </div>
-            
+
             <div class="project-card">
-              <h3>Simulation Algo POO</h3>
-              <video src="videos/simulation.mp4" autoplay loop muted style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;"></video>
-              <p>Simulation Pierre-Feuille-Ciseaux (Python). Approfondissement de la POO, gestion des collisions et de comportements.</p>
+              <h3>Simulation Algorithmique (Python)</h3>
+              <video src="videos/simulation.mp4" autoplay loop muted style="width: 100%; height: 220px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;"></video>
+              <p>Simulation PFC + virus en Python/Pygame. Veille sur méthode de Baumgarte et Delta Time (LLMs). Optimisation via <em>Spatial Partitioning</em> pour gérer des centaines d'entités.</p>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem;">
+                <span style="background: var(--brand-2); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Org. Professionnelle</span>
+                <span style="background: var(--brand); color: #000; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Mode Projet</span>
+              </div>
             </div>
         </div>
       </div>
