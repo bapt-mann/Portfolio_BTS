@@ -215,9 +215,8 @@ footer { padding: 40px 0; text-align: center; color: var(--muted); border-top: 1
 /* ================= AFFICHAGE IMPACTANT DES PROJETS BTS ================= */
 .large-grid {
     display: grid;
-    /* On force 2 grandes colonnes sur les écrans larges */
-    grid-template-columns: repeat(1, 1fr);
-    gap: 3rem; /* On augmente grandement l'espace entre les cartes pour les détacher */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
 
 .large-grid .card {
@@ -239,16 +238,16 @@ footer { padding: 40px 0; text-align: center; color: var(--muted); border-top: 1
 }
 
 .large-grid .p-content {
-    padding: 2.5rem 2rem; /* On donne beaucoup plus de respiration au texte */
+    padding: 1.75rem 1.5rem;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
 .large-grid h3 {
-    font-size: 1.6rem; /* Un titre de projet beaucoup plus assumé */
+    font-size: 1.25rem;
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: .75rem;
     color: var(--brand);
 }
 
@@ -318,5 +317,5 @@ footer { padding: 40px 0; text-align: center; color: var(--muted); border-top: 1
   nav a { font-size: 0.9rem; padding: 0.4rem 0.6rem; }
   .hero h1 { font-size: 2rem; }
   .container { width: 90vw; }
-  .large-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .large-grid { grid-template-columns: 1fr; gap: 1.5rem; }
 }
