@@ -75,7 +75,12 @@
           <div class="project-card">
             <h3>CRM Contact Manager</h3>
             <img src="images/crm_1.png" alt="Capture d'écran CRM">
-            <p>Architecture N-Tier (C# WPF + API REST + MySQL). RBAC 4 niveaux, déploiement automatisé via Velopack + IIS, intégration Click-to-Call avec le système 3CX.</p>
+            <ul style="text-align: left; margin: 0.5rem 0; padding-left: 1.2rem; font-size: 0.9rem; line-height: 1.7;">
+              <li>Architecture N-Tier : client lourd C# WPF, API REST ASP.NET Core, base MySQL (Entity Framework)</li>
+              <li>Contrôle d'accès RBAC sur 4 niveaux d'habilitation (Lecture → Super Admin)</li>
+              <li>Déploiement automatisé via Velopack + hébergement API sur IIS (Windows Server)</li>
+              <li>Fonctionnalité Click-to-Call intégrée au système téléphonique 3CX via URI personnalisé</li>
+            </ul>
             <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem;">
               <span style="background: var(--brand); color: #000; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Patrimoine</span>
               <span style="background: var(--brand-2); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Incidents</span>
@@ -86,7 +91,12 @@
           <div class="project-card">
             <h3>Générateur SQL vers Excel</h3>
             <img src="images/python_logo.webp" alt="Logo Python">
-            <p>Outil RPA Python : requêtes SQL configurées via <code>commande.cfg</code>, identifiants chiffrés (Fernet), export formaté à la charte graphique via <code>modele.cfg</code>.</p>
+            <ul style="text-align: left; margin: 0.5rem 0; padding-left: 1.2rem; font-size: 0.9rem; line-height: 1.7;">
+              <li>Outil RPA Python automatisant l'extraction SQL Server vers Excel formaté</li>
+              <li>Requêtes SQL externalisées dans <code>commande.cfg</code> — modifiables sans recompilation</li>
+              <li>Identifiants chiffrés via <code>cryptography.fernet</code> (chiffrement symétrique)</li>
+              <li>Export respectant la charte graphique via modèle Excel préformaté (<code>modele.cfg</code>)</li>
+            </ul>
             <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem;">
               <span style="background: var(--brand); color: #000; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Patrimoine</span>
               <span style="background: var(--brand-2); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Incidents</span>
@@ -97,7 +107,11 @@
           <div class="project-card">
             <h3>Réseau Sites WordPress</h3>
             <img src="images/site_web_1.png" alt="Capture d'écran WordPress">
-            <p>Déploiement de l'identité numérique de plusieurs filiales ABT. Optimisation SEO (Title, Meta Description, H1/H2) pour indexation Google dans le secteur logistique.</p>
+            <ul style="text-align: left; margin: 0.5rem 0; padding-left: 1.2rem; font-size: 0.9rem; line-height: 1.7;">
+              <li>Création et déploiement des sites vitrines de plusieurs filiales ABT (thème OnePress)</li>
+              <li>Gestion complète : réservation du nom de domaine jusqu'à la mise en ligne</li>
+              <li>Optimisation SEO : balises Title, Meta Description, structure H1/H2 pour le secteur logistique</li>
+            </ul>
             <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem;">
               <span style="background: var(--brand-2); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Présence Web</span>
             </div>
@@ -117,7 +131,13 @@
             <div class="project-card" style="max-width: 600px;">
               <h3 style="color: var(--brand);">WorkTogether — SI Data Center</h3>
               <img src="images/worktogether.png" alt="WorkTogether" style="width: 100%; height: 220px; object-fit: contain; border-radius: 8px; margin-bottom: 1rem;">
-              <p>Architecture duale : portail web Symfony (espace client, auth email, suivi baies) + client lourd (admin RBAC). Déploiement stack LEMP sur Debian. Pilotage via Kanban GitHub.</p>
+              <ul style="text-align: left; margin: 0.5rem 0; padding-left: 1.2rem; font-size: 0.9rem; line-height: 1.7;">
+                <li>Architecture duale : portail web Symfony (espace client externe) + client lourd (gestion interne)</li>
+                <li>Authentification par email, configuration de baies, suivi des incidents côté portail</li>
+                <li>Gestion des droits RBAC côté application de bureau (technicien, comptable, admin…)</li>
+                <li>Pilotage Kanban via GitHub Projects — chaque fonctionnalité traduite en Issue</li>
+                <li>Déploiement stack LEMP (NGINX, MySQL, PHP) sur serveur virtuel Debian</li>
+              </ul>
               <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem;">
                 <span style="background: var(--brand); color: #000; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Patrimoine</span>
                 <span style="background: var(--brand-2); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Présence Web</span>
@@ -137,7 +157,11 @@
             <div class="project-card">
               <h3>POC Backend Multijoueur (Node.js)</h3>
               <img src="images/jeu_web.png" alt="Jeu Websocket">
-              <p>POC T-RPG 1v1 navigateur. Backend Node.js/TypeScript + WebSockets. Concept <em>Server Authority</em> pour sécuriser l'état de la partie. Auto-formation TypeScript en dehors du cursus.</p>
+              <ul style="text-align: left; margin: 0.5rem 0; padding-left: 1.2rem; font-size: 0.9rem; line-height: 1.7;">
+                <li>Moteur T-RPG 1v1 navigateur — backend Node.js transpilé en TypeScript + WebSockets</li>
+                <li>Concept <em>Server Authority</em> : le backend valide chaque action et renvoie l'état synchronisé aux deux joueurs</li>
+                <li>Auto-formation TypeScript et WebSockets en dehors du cursus scolaire</li>
+              </ul>
               <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem;">
                 <span style="background: var(--brand); color: #000; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Patrimoine</span>
                 <span style="background: var(--brand-2); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Org. Professionnelle</span>
@@ -147,7 +171,12 @@
             <div class="project-card">
               <h3>Simulation Algorithmique (Python)</h3>
               <video src="videos/simulation.mp4" autoplay loop muted style="width: 100%; height: 220px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;"></video>
-              <p>Simulation POC + virus en Python/Pygame. Veille sur méthode de Baumgarte et Delta Time (LLMs). Optimisation via <em>Spatial Partitioning</em> pour gérer des centaines d'entités.</p>
+              <ul style="text-align: left; margin: 0.5rem 0; padding-left: 1.2rem; font-size: 0.9rem; line-height: 1.7;">
+                <li>Écosystème Python/Pygame : entités autonomes (règles PFC + mécanique de virus)</li>
+                <li>Moteur physique : forces vectorielles, collisions (méthode de Baumgarte, Delta Time)</li>
+                <li>Usage de LLMs pour assimiler et transposer des concepts mathématiques en POO</li>
+                <li>Optimisation par <em>Spatial Partitioning</em> (chunks de 80px) pour gérer des centaines d'entités</li>
+              </ul>
               <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem;">
                 <span style="background: var(--brand-2); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Org. Professionnelle</span>
                 <span style="background: var(--brand); color: #000; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Mode Projet</span>
