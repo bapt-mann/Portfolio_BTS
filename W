@@ -1,0 +1,16 @@
+Bonjour, je m'appelle Baptiste ... BTS SIO SLAM ... Alternant ABT ... Soutenance Epreuve E5
+
+Tout d'abord ... parcours ... Collège intéressé ... BAC STI2D ... BTS SIO SLAM
+
+Tableau de Synthèse condensé
+
+Pour Commencer ... Projets Entreprise ... 
+
+1er ... Générateur fichier Excel grace à une requète SQL ...
+Exister car : Demande Utilisateurs ... utilisent des donneées brutes ou manque d'infos
+Permet de sécuriser l'accès aux ressources avec la librairie python cryptography.fernet
+Simplifier l'utilisation : 
+possibilité d'utiliser un modèle excel pour éviter de restyliser le fichier 
+mise a disposition de l'exécutable et de la documentation de l'application sur le lecteur réseau de l'entreprise
+
+2nd ... Wordpress thème one press ... mettre en avant les filiales de l'entreprise
