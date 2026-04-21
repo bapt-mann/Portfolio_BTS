@@ -3,7 +3,7 @@
 ![Aperçu de l'application](images/crm_1.png)
 
 ## Présentation du projet
-Pour centraliser l'annuaire des contacts professionnels de l'entreprise, j'ai développé une solution applicative complète (CRM). L'objectif était de remplacer les fichiers Excel éparpillés par un outil unique et hautement sécurisé. Ce projet repose sur une architecture N-Tier : un client lourd C# WPF pour l'interface, une API backend ASP.NET Core RESTful pour la logique, et une base de données MySQL gérée via Entity Framework Core. 
+Pour centraliser l'annuaire des contacts professionnels de l'entreprise, j'ai développé une solution applicative complète (CRM). L'objectif était de remplacer les fichiers Excel éparpillés par un outil unique. Ce projet repose sur une architecture N-Tier : un client lourd C# WPF pour l'interface, une API backend ASP.NET Core RESTful pour la logique, et une base de données MySQL gérée via Entity Framework Core. 
 
 ## Gérer le patrimoine informatique  
 J'ai conçu l'application en respectant les standards d'architecture (Pattern MVVM, N-Tier) pour faciliter sa maintenabilité. J'ai surtout mis en place un contrôle d'accès strict basé sur les rôles (RBAC). L'API filtre les droits des utilisateurs selon quatre niveaux d'habilitation (de la Lecture Seule au Super Administrateur), garantissant que chaque collaborateur n'a accès qu'aux données de son agence, protégeant ainsi les informations sensibles de l'entreprise.
